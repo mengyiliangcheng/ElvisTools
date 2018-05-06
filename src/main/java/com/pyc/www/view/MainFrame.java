@@ -16,17 +16,24 @@ public class MainFrame extends JFrame {
 
     public MainFrame(){
         super();
+
+        /**set main frame */
         setTitle(Str.AUTHOR + Str.VERSION);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(WIDTH,HEIGHT));
         setResizable(true);
         setLayout(new GridLayout(1,2));
 
+        /**set menu*/
         JMenuBar menu = new MainMenu();
         setJMenuBar(menu);
 
-        add(new ResultFrame());
+        /**set operation frame*/
         add(new OperationFrame());
+
+        /**set result frame*/
+        add(new ResultFrame());
+
         pack();
     }
 }

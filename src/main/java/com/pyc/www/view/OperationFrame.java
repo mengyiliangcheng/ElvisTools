@@ -1,6 +1,7 @@
 package com.pyc.www.view;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * @author pengyicheng
@@ -12,6 +13,11 @@ public class OperationFrame extends JPanel {
     public OperationFrame(){
         super();
 
+        setLayout(new GridLayout(3,1,4,4));
+
+        add(new InputFrame());
+        add(new MidFrame());
+        add(new FunctionFrame());
 
     }
 }

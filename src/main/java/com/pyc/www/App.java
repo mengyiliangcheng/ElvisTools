@@ -12,6 +12,7 @@ public class App
     {
         System.out.println( "Hello World!" );
         MainFrame mainFrame = new MainFrame();
+
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setVisible(true);
     }
