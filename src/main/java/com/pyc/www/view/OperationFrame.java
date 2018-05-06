@@ -17,7 +17,6 @@ public class OperationFrame extends JPanel {
 
         add(new InputFrame());
         add(new MidFrame());
-        add(new FunctionFrame());
-
+        add(FunctionFrame.getInstance());
     }
 }

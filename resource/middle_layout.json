@@ -1,0 +1,7 @@
+{
+  "middle": [
+    {"name":"next page","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"last page","enable":1,"className":"com.pyc.www.Listener.SwitchLeftPanel","icon":""},
+    {"name":"go back",  "enable":1,"className":"com.pyc.www.Listener.SwitchLeftPanel","icon":""}
+]
+}

@@ -1,0 +1,34 @@
+{
+  "basic":[
+    {"name":"remove comma(,)","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"remove \\x","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"remove 0x","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"remove \\","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"cal length","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"format 0x","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"format \\x","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"upper case","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"lower case","enable":1,"className":"com.pyc.www.Listener.RemoveComma"}
+  ],
+  "algorithm":[
+    {"name":"des en","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"des de","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"des box","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"free style","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"do free","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"bin message","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"bitmap","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"emv","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"check json","enable":1,"className":"com.pyc.www.Listener.RemoveComma"}
+  ],
+  "convertion":[
+    {"name":"16->10","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"10->16","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"16->2","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"2->16","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"ascii->hex","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"hex->ascii","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"utf8->hex","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"hex->utf8","enable":1,"className":"com.pyc.www.Listener.RemoveComma"}
+  ]
+}

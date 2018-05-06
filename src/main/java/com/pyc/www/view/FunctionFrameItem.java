@@ -1,12 +1,11 @@
 package com.pyc.www.view;
 
-import com.pyc.www.Listener.SwitchLeftPanel;
 import com.pyc.www.controller.LayoutConfig;
-import com.pyc.www.controller.MidLayoutConfig;
 import com.pyc.www.model.LayoutItemModel;
 import com.pyc.www.model.LayoutModel;
-import com.pyc.www.model.MidLayoutModel;
 import com.pyc.www.utils.FileSystemClassLoader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,21 +18,27 @@ import java.util.List;
  * @version 1.0, 06/05/2018
  * @since 1.0.0
  */
-public class MidFrame extends JPanel {
-    private MidLayoutModel layoutModel = MidLayoutConfig.getResource();
+public class FunctionFrameItem extends JPanel {
+    private final static Logger logger = LoggerFactory.getLogger(FunctionFrame.class);
+    private LayoutModel layoutModel = LayoutConfig.getResource();
     private static String  rootPath = System.getProperty("user.dir");
+    List<LayoutItemModel> layouts = null;
 
-    public MidFrame(){
+    public FunctionFrameItem(){
+        super();
+    }
+
+    public FunctionFrameItem(List<LayoutItemModel> layoutItemModels){
         super();
 
-        setLayout(new GridLayout(3,1,1,1));
-        //Button button = new Button("switch");
-        //button.addActionListener(new SwitchLeftPanel());
-        //add(button);
-        //add(new Button("xxx"));
-        //add(new Button("mmmm"));
+        if(null == layoutItemModels){
+            return ;
+        }
+        SetLayoutItems(layoutItemModels);
 
-        List<LayoutItemModel> lists = layoutModel.getMiddle();
+        setLayout(new GridLayout(3, 4, 4, 4));
+
+        List<LayoutItemModel> lists = layouts;
         Iterator<LayoutItemModel> it = lists.iterator();
         while(it.hasNext()){
             LayoutItemModel layoutItemModel = (LayoutItemModel)it.next();
@@ -52,6 +57,9 @@ public class MidFrame extends JPanel {
                 add(button);
             }
         }
+    }
 
+    public void SetLayoutItems(List<LayoutItemModel> layoutItemModels){
+        layouts = layoutItemModels;
     }
 }
