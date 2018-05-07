@@ -2,6 +2,7 @@ package com.pyc.www.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.pyc.www.model.LayoutModel;
+import com.pyc.www.utils.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,30 +19,14 @@ import java.io.InputStreamReader;
 public class LayoutConfig {
 
     private final static Logger logger = LoggerFactory.getLogger(InitialConfig.class);
-    private static String  ConfigPath = System.getProperty("user.dir") + File.separator + "resource" + File.separator + "function_layout.json";
+    private static String  ConfigPath = null;
     private static LayoutModel layoutModel = null;
     private static LayoutConfig layoutConfig = null;
 
     private LayoutConfig(){
-        logger.info(ConfigPath);
-        File file = new File(ConfigPath);
-        if(!file.exists() || !file.isFile()){
-            logger.error("function_layout.json not exist!");
-        }
-        String txt = "";
-        try {
-            InputStreamReader reader = new InputStreamReader(new FileInputStream(file), "utf-8");
-            BufferedReader br = new BufferedReader(reader);
 
-            String tmp;
-            while((tmp = br.readLine()) != null){
-                txt = txt + tmp;
-            }
-            reader.close();
-        }catch (Exception e){
-            logger.error(e.getMessage());
-            return ;
-        }
+        FileUtils fileUtils = new FileUtils();
+        String txt = fileUtils.readFromResource("function_layout.json");
         layoutModel = JSON.parseObject(txt,LayoutModel.class);
         logger.info("sysConfigure:" + layoutModel);
     }

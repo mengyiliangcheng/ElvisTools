@@ -14,6 +14,6 @@ public class SwitchRightPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         FunctionFrame functionFrame = FunctionFrame.getInstance();
-        functionFrame.SwitchPanel(true);
+        functionFrame.SwitchPanel(false);
     }
 }

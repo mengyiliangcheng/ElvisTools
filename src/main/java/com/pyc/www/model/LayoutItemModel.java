@@ -10,6 +10,7 @@ public class LayoutItemModel {
     private Integer enable;
     private String  className;
     private String icon;
+    private String description;
 
     public String getName() {
         return name;
@@ -43,6 +44,14 @@ public class LayoutItemModel {
         this.icon = icon;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "LayoutItemModel{" +
@@ -50,6 +59,7 @@ public class LayoutItemModel {
                 ", enable=" + enable +
                 ", className='" + className + '\'' +
                 ", icon='" + icon + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

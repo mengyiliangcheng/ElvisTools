@@ -1,6 +1,6 @@
 {
   "basic":[
-    {"name":"remove comma(,)","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
+    {"name":"remove comma(,)","enable":1,"className":"com.pyc.www.Listener.RemoveComma","icon":""},
     {"name":"remove \\x","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
     {"name":"remove 0x","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},
     {"name":"remove \\","enable":1,"className":"com.pyc.www.Listener.RemoveComma"},

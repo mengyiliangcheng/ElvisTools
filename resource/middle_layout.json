@@ -1,7 +1,23 @@
 {
   "middle": [
-    {"name":"next page","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
-    {"name":"last page","enable":1,"className":"com.pyc.www.Listener.SwitchLeftPanel","icon":""},
+    {"name":"last page","enable":1,"className":"com.pyc.www.Listener.SwitchLeftPanel","icon":"arrow_left.png","description":"Go to last page"},
+    {"name":"next page","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":"arrow_right.png","description":"Go to next page"},
+    {"name":"next page1","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"last page1","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":"back.png"},
+    {"name":"next page2","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"last page3","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"next page4","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"last page4","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"next page5","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"last page5","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"next page5","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"last page5","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"next page5","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"last page5","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"next page5","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"last page5","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"next page5","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
+    {"name":"last page5","enable":1,"className":"com.pyc.www.Listener.SwitchRightPanel","icon":""},
     {"name":"go back",  "enable":1,"className":"com.pyc.www.Listener.SwitchLeftPanel","icon":""}
 ]
 }

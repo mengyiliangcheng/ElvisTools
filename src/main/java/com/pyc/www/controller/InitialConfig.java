@@ -3,6 +3,7 @@ package com.pyc.www.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.pyc.www.model.SysConfigure;
+import com.pyc.www.utils.FileUtils;
 import com.pyc.www.utils.Str;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,31 +17,15 @@ import java.io.*;
  */
 public class InitialConfig {
     private final static Logger logger = LoggerFactory.getLogger(InitialConfig.class);
-    private static String  ConfigPath = System.getProperty("user.dir") + File.separator + "resource" + File.separator + "configure.json";
+    //private static String  ConfigPath = System.getProperty("user.dir") + File.separator + "resource" + File.separator + "configure.json";
+    private static String ConfigPath = null;
     private static InitialConfig initialConfig = null;
     private static SysConfigure sysConfigure = null;
 
     private InitialConfig(){
-        logger.info(ConfigPath);
-        File file = new File(ConfigPath);
-        if(!file.exists() || !file.isFile()){
-            logger.error("configure.json not exist!");
+        FileUtils fileUtils = new FileUtils();
+        String txt = fileUtils.readFromResource("configure.json");
 
-        }
-        String txt = "";
-        try {
-            InputStreamReader reader = new InputStreamReader(new FileInputStream(file), "utf-8");
-            BufferedReader br = new BufferedReader(reader);
-
-            String tmp;
-            while((tmp = br.readLine()) != null){
-                txt = txt + tmp;
-            }
-            reader.close();
-        }catch (Exception e){
-            logger.error(e.getMessage());
-            return ;
-        }
         sysConfigure = JSON.parseObject(txt,SysConfigure.class);
         logger.info("sysConfigure:" + sysConfigure);
         if(null != sysConfigure){
